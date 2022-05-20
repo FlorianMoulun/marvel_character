@@ -1,4 +1,4 @@
-function test(offset) {
+function apiCall(offset) {
     let ts = 1;
     let apikey = 'd045aa1f2992237d85bf2c43b7a3378d';
     let hash = '7e112c8e7f740b99c72147e6fc40d5e6';
@@ -33,23 +33,14 @@ function test(offset) {
     )
 }
 
+let btnajax = document.querySelector('#btnajax')
+let res = 0;
+apiCall(res);
+btnajax.addEventListener('click', function(){
+    res += 100
+    apiCall(res);
+});
 
-test(0);
-test(100);
-test(200);
-test(300);
-test(400);
-test(500);
-test(600);
-test(700);
-test(800);
-test(900);
-test(1000);
-test(1100);
-test(1200);
-test(1300);
-test(1400);
-test(1500);
 
 
 
