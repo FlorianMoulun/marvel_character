@@ -209,7 +209,7 @@ main div button:nth-of-type(2):hover
 
     body
     {
-        background-image: url('./Assets/bgCharacters.svg');
+        background-image: url('../assets/image/bgCharacters.svg');
         background-size: cover;
         background-repeat: no-repeat;
         width: 95vw;
@@ -330,7 +330,7 @@ main div button:nth-of-type(2):hover
 
     body
     {
-        background-image: url('./Assets/bgCharacters.svg');
+        background-image: url('../assets/image/bgCharacters.svg');
         background-size: cover;
         background-repeat: no-repeat;
         width: 95vw;
@@ -451,7 +451,7 @@ main div button:nth-of-type(2):hover
 
     body
     {
-        background-image: url('./Assets/bgCharacters.svg');
+        background-image: url('../assets/image/bgCharacters.svg');
         background-size: cover;
         background-repeat: no-repeat;
         width: 95vw;

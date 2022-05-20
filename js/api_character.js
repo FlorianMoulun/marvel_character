@@ -1,4 +1,4 @@
-function test(offset) {
+function apiCall(offset) {
     let ts = 1;
     let apikey = 'd045aa1f2992237d85bf2c43b7a3378d';
     let hash = '7e112c8e7f740b99c72147e6fc40d5e6';
@@ -7,7 +7,7 @@ function test(offset) {
     fetch(url)
     .then((response) => response.json()
     .then((data) => {
-        console.log(data);
+        //console.log(data);
 
         for (let i = 0; i < data.data.results.length; i++) {
             let parentElement = document.querySelector('#gallery');
@@ -21,7 +21,7 @@ function test(offset) {
                 let imgCharacter = newElem('img', {"class":"imgCharacter","src":data.data.results[i].thumbnail.path+'.'+data.data.results[i]. thumbnail.extension});
                 let tapisImgCharacter = newElem("div", {"class":"tapisImgCharacter"});
                 let nameCharacter = newElem('p', {"class":"nameCharacter"}, data.data.results[i].name);
-                let containerCharacter = newElem("div", {"class":"containerCharacter"});
+                let containerCharacter = newElem("div", {"class":"containerCharacter", "data-i":i});
 
                 tapisImgCharacter.insertBefore(imgCharacter, tapisImgCharacter.lastChild);
                 containerCharacter.insertBefore(tapisImgCharacter, containerCharacter.lastChild);
@@ -29,30 +29,36 @@ function test(offset) {
                 parentElement.insertBefore(containerCharacter, parentElement.lastChild);
             }
         }
+
+        let frames = document.querySelectorAll('.containerCharacter');
+        frames.forEach(frame => {
+            frame.addEventListener("click", function(){
+                let i = this.dataset.i;
+                let pagePerso = document.querySelector('#pagePerso');
+                let persoImg = newElem("img", {"class":"imgCharacter","src":data.data.results[i].thumbnail.path+'.'+data.data.results[i]. thumbnail.extension});
+                let sectionPersoImg = newElem("section", "");
+                let sectionPersoImg2 = newElem("section", "");
+                let divPersoImg = newElem("div", "");
+                let namePerso = newElem("h2", "", data.data.results[i].name);
+                let descPerso = newElem("p", "", data.data.results[i].description)
+
+                sectionPersoImg.insertBefore(persoImg, sectionPersoImg.lastChild);
+                pagePerso.insertBefore(sectionPersoImg, pagePerso.lastChild)
+
+                divPersoImg.insertBefore(namePerso, divPersoImg.lastChild);
+                divPersoImg.insertBefore(descPerso, divPersoImg.lastChild);
+                sectionPersoImg2.insertBefore(divPersoImg, sectionPersoImg2.lastChild);
+                pagePerso.insertBefore(sectionPersoImg2, pagePerso.lastChild)
+
+                pagePerso.style.display = 'block';
+                document.querySelector('#gallery').style.display = 'none';
+            })
+        });
     })
     )
 }
 
-
-test(0);
-test(100);
-test(200);
-test(300);
-test(400);
-test(500);
-test(600);
-test(700);
-test(800);
-test(900);
-test(1000);
-test(1100);
-test(1200);
-test(1300);
-test(1400);
-test(1500);
-
-
-
+apiCall(0);
 
 
 /* Fonction pour créer et placer des elements */
