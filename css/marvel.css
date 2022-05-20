@@ -5,8 +5,9 @@ body
     background-image: url('../assets/image/bgCharacters.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 95vw;
     height: 95vh;
+    padding: 0;
+    margin: 0;
 }
 
 nav
@@ -15,7 +16,7 @@ nav
     margin-top: -8px;
     margin-left: -8px;
     height: 15vh;
-    width: 100vw;
+    width: 100%;
     filter: drop-shadow(0px 5px 5px black);
 }
 
@@ -36,12 +37,12 @@ nav img:nth-of-type(3)
     margin-left: 20vw;
 }
 
-main div
+/* main div
 {
     filter: drop-shadow(0px 2px 2px black);
     margin-top: 5vh;
     margin-left: 2vw;
-}
+} */
 
 main div button:nth-of-type(1)
 {
@@ -90,6 +91,7 @@ main div button:nth-of-type(2):hover
 {
     background-color: #2e51f0;
 }
+
 
 @media screen and (max-width: 1440px) {
 
