@@ -7,6 +7,7 @@ body
     background-image: url('../assets/image/bgCharacters.svg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #F3F3F3;
     height: 95vh;
     padding: 0;
     margin: 0;
@@ -40,61 +41,9 @@ nav img:nth-of-type(3)
     margin-left: 20vw;
 }
 
-/* main div
-{
-    filter: drop-shadow(0px 2px 2px black);
-    margin-top: 5vh;
-    margin-left: 2vw;
-} */
-
-#search
-{
-    margin-left: 10vw;
-    margin-right: -5px;
-    width: 15rem;
-    height: 6rem;
-    border: none;
-    cursor: pointer;
-    font-size: xx-large;
-    font-family: 'Marvel';
-}
-
-main div input
-{
+main{
     margin-top: 150px;
-    width: 50vw;
-    height: 10vh;
-    border: none;
-    opacity: 50%;
-    font-size: xx-large;
 }
-
-main div button:nth-of-type(2)
-{
-    margin-left: -5px;
-    width: 15rem;
-    height: 6rem;
-    border: none;
-    cursor: pointer;
-    font-size: xx-large;
-    font-family: 'Marvel';
-}
-
-main div button img
-{
-    margin-right: 15px;
-}
-
-main div button:nth-of-type(1):hover
-{
-    background-color: #2e51f0;
-}
-
-main div button:nth-of-type(2):hover
-{
-    background-color: #2e51f0;
-}
-
 
 @media screen and (max-width: 1440px) {
 
@@ -251,15 +200,6 @@ main div button:nth-of-type(2):hover
         margin-bottom: 115px;
         margin-left: 15vw;
     }
-    
-    /* Barre de recherche et ses boutons */
-
-    main div
-    {
-        filter: drop-shadow(0px 2px 2px black);
-        margin-top: 2vh;
-        margin-left: 2vw;
-    }
 
     /* Bouton chercher */
     
@@ -371,15 +311,6 @@ main div button:nth-of-type(2):hover
     {
         margin-bottom: 115px;
         margin-left: 10vw;
-    }
-    
-    /* Barre de recherche et ses boutons */
-
-    main div
-    {
-        filter: drop-shadow(0px 2px 2px black);
-        margin-top: 2vh;
-        margin-left: 2vw;
     }
 
     /* Bouton chercher */
@@ -496,15 +427,6 @@ main div button:nth-of-type(2):hover
     {
         margin-bottom: 115px;
         margin-left: 5vw;
-    }
-    
-    /* Barre de recherche et ses boutons */
-
-    main div
-    {
-        filter: drop-shadow(0px 2px 2px black);
-        margin-top: 2vh;
-        margin-left: 2vw;
     }
 
     /* Bouton chercher */
