@@ -28,7 +28,7 @@
     padding-top: 10px;
 }
 
-.containerCharacter:after .nameCharacter:{
+.containerCharacter:after .nameCharacter{
     border-top: #E62429 solid 4px;
     padding-top: 10px;
 }
@@ -68,6 +68,26 @@
      box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
      transition: ease-in-out 0.0s
 
+}
+
+#btnBack{
+    width: 300px;
+    height: 90px;
+    background: #202A56;
+    color: white;
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
+    border:  none;
+    font-family: 'Koulen', sans-serif;
+    font-size: 1.3rem;
+    margin: 5%;
+}
+#btnBack:hover{
+    background: #A90A12;
+    transition: ease-in-out 1s;
+}
+#btnBack:active{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+    transition: ease-in-out 0.0s
 }
 
 #centralbtn{

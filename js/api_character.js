@@ -78,8 +78,14 @@ function placeElem(elem, ref, ou=null){
 
 let btnajax = document.querySelector('#btnajax')
 let res = 0;
-apiCall(res);
 btnajax.addEventListener('click', function(){
     res += 100
     apiCall(res);
 });
+
+let btnBack = document.querySelector('#btnBack');
+btnBack.addEventListener('click', function(){
+    document.querySelector('#gallery').style.display = 'block';
+    document.querySelector('#centralbtn').style.display = 'block';
+    document.querySelector('#pagePerso').style.display = 'none';
+})
