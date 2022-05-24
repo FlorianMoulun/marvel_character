@@ -26,5 +26,5 @@ Le projet s'est effectué *du 18/05/2022 au 24/05/2022*.
 
 ## Lien du projet en ligne (collaborateur August Gros et Moustapha Kammoun)
 
-Lien vers le github du collaborateur : [August Gros](https://github.com/Ogust25?target=_blank)
+Lien vers le github du collaborateur : [August Gros](https://github.com/Ogust25?target=_blank)  
 Lien vers le github du collaborateur : [Moustapha Kammoun](https://github.com/MoustaphaKammoun?target=_blank)

@@ -97,3 +97,10 @@
 #pagePerso{
     display: none;
 }
+
+
+@media screen and (max-width: 800px) {
+    .imgCharacter{
+        height: 250px;
+    }
+}
