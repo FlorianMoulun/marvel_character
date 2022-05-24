@@ -10,7 +10,6 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 .imgCharacter{
-    width: 280px;
     height: 350px;
 }
 .nameCharacter{
@@ -90,7 +89,7 @@
     transition: ease-in-out 0.0s
 }
 
-#centralbtn{
+.centralbtn{
     display: flex;
     justify-content: center;
 }

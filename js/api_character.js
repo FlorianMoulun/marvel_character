@@ -40,7 +40,9 @@ function apiCall(offset) {
                 let sectionPersoImg2 = newElem("section", "");
                 let divPersoImg = newElem("div", "");
                 let namePerso = newElem("h2", "", data.data.results[i].name);
-                let descPerso = newElem("p", "", data.data.results[i].description)
+                let descPerso = newElem("p", "", data.data.results[i].description);
+                let btnCenter = newElem("div", {"class":"centralbtn"});
+                let btnBack = newElem("button", {"id":"btnBack"}, 'BACK');
 
                 sectionPersoImg.insertBefore(persoImg, sectionPersoImg.lastChild);
                 pagePerso.insertBefore(sectionPersoImg, pagePerso.lastChild)
@@ -48,11 +50,23 @@ function apiCall(offset) {
                 divPersoImg.insertBefore(namePerso, divPersoImg.lastChild);
                 divPersoImg.insertBefore(descPerso, divPersoImg.lastChild);
                 sectionPersoImg2.insertBefore(divPersoImg, sectionPersoImg2.lastChild);
-                pagePerso.insertBefore(sectionPersoImg2, pagePerso.lastChild)
+                pagePerso.insertBefore(sectionPersoImg2, pagePerso.lastChild);
+                btnCenter.insertBefore(btnBack, btnCenter.lastChild);
+                pagePerso.insertBefore(btnCenter, pagePerso.lastChild);
 
                 pagePerso.style.display = 'block';
                 document.querySelector('#gallery').style.display = 'none';
-                document.querySelector('#centralbtn').style.display = 'none';
+                document.querySelector('.centralbtn').style.display = 'none';
+                
+                btnBack.addEventListener('click', function(){
+                    document.querySelector('#gallery').style.display = 'flex';
+                    document.querySelector('.centralbtn').style.display = 'flex';
+                    document.querySelector('#pagePerso').style.display = 'none';
+                    for (let i = 0; i < pagePerso.childNodes.length; i++) {
+                        pagePerso.removeChild(pagePerso.firstChild);
+                        btnBack.style.display = 'none';
+                    }
+                })
             })
         });
     })
@@ -60,7 +74,6 @@ function apiCall(offset) {
 }
 
 apiCall(0);
-
 
 /* Fonction pour créer et placer des elements */
 function newElem(el, attribut, content=""){
@@ -82,10 +95,3 @@ btnajax.addEventListener('click', function(){
     res += 100
     apiCall(res);
 });
-
-let btnBack = document.querySelector('#btnBack');
-btnBack.addEventListener('click', function(){
-    document.querySelector('#gallery').style.display = 'block';
-    document.querySelector('#centralbtn').style.display = 'block';
-    document.querySelector('#pagePerso').style.display = 'none';
-})
